@@ -1,0 +1,6 @@
+.git
+.gitignore
+*.md
+bot.db
+starbot
+dist/
