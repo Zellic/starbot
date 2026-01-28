@@ -1,0 +1,10 @@
+services:
+  starbot:
+    build: .
+    image: ghcr.io/zellic/starbot:latest
+    restart: unless-stopped
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    volumes:
+      - ./data:/app/data
+    working_dir: /app/data
