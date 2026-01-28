@@ -21,4 +21,4 @@ WORKDIR /app
 
 COPY --from=builder /app/starbot .
 
-CMD ["./starbot"]
+CMD ["/app/starbot"]

@@ -1,4 +1,4 @@
-module starbot
+module github.com/Zellic/starbot
 
 go 1.22
 
