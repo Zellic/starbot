@@ -142,6 +142,12 @@ func main() {
 	}
 	defer dg.Close()
 
+	if err := dg.UpdateStatusComplex(discordgo.UpdateStatusData{
+		Status: string(discordgo.StatusInvisible),
+	}); err != nil {
+		log.Fatalf("set invisible status: %v", err)
+	}
+
 	appID := dg.State.User.ID
 	_, err = dg.ApplicationCommandCreate(appID, "", command)
 	if err != nil {
